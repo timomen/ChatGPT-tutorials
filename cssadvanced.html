@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS voor gevorderden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/">Home</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsdom.html">JavaScript DOM</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/cssadvanced.html">CSS voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/htmladvanced.html">HTML voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsadvanced.html">JavaScript voor gevorderden</a>
+    </div>
+
+    <div class="main">
+        <h1>CSS voor gevorderden</h1>
+        <p>Welkom bij deze tutorial over CSS voor gevorderden. In deze tutorial zullen we enkele van de meer geavanceerde functies van CSS verkennen en hoe u deze kunt gebruiken om uw webpagina's nog beter te maken.</p>
+        <h1>1. Gebruik van variabelen</h1>
+        <p>Met variabelen kunt u waarden definiëren en deze vervolgens hergebruiken in uw CSS-code. Dit is handig wanneer u bijvoorbeeld een kleur of een lettertype vaak gebruikt op uw website en u deze niet elke keer handmatig wilt invoeren. Hier is een voorbeeld van hoe u variabelen in CSS kunt gebruiken:</p>
+        <code>:root {
+    --main-color: #4286f4;
+    --main-font: Arial, sans-serif;
+}
+
+h1 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
+
+p {
+    color: var(--main-color);
+}</code>
+        <p>Hier definieert de <b>:root</b> selector de variabelen <b>--main-color</b> en <b>--main-font</b>, die vervolgens worden gebruikt in de <b>h1</b> en <b>p</b> elementen.</p>
+        <h1>2. Gebruik van flexbox</h1>
+        <p>Flexbox is een CSS-layoutmodule die flexibele en responsieve lay-outs mogelijk maakt zonder dat u veel code hoeft te schrijven. Met flexbox kunt u de grootte, volgorde en uitlijning van elementen op een webpagina beheren. Hier is een voorbeeld van hoe u flexbox kunt gebruiken:</p>
+        <code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container div {
+    flex-basis: 30%;
+}</code>
+        <p>Hier wordt de <b>display: flex</b> eigenschap gebruikt om de <b>.container</b> een flexcontainer te maken. De <b>justify-content</b> en <b>align-items</b> eigenschappen worden gebruikt om de uitlijning van de elementen in de container te beheren. De <b>flex-basis</b> eigenschap wordt gebruikt om de breedte van de <b>div</b> elementen in de container te bepalen.</p>
+        <h1>3. Gebruik van grids</h1>
+        <p>CSS Grid is een krachtige layoutmodule waarmee u complexe en responsieve lay-outs kunt maken. Met CSS Grid kunt u de grootte, positie en volgorde van elementen op een webpagina beheren en tegelijkertijd de structuur van uw HTML-document vereenvoudigen. Hier is een voorbeeld van hoe u CSS Grid kunt gebruiken:</p>
+        <code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container div {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}</code>
+        <p>Hier wordt de <b>display: grid</b> eigenschap gebruikt om de <b>.container</b> een gridcontainer te maken. De <b>grid-template-columns</b> en <b>grid-template-rows</b> eigenschappen worden gebruikt om de grootte van de cellen in het grid te bepalen. De <b>gap</b> eigenschap wordt gebruikt om de afstand tussen de cellen te bepalen. De <b>grid-column</b> en <b>grid-row</b> eigenschappen worden gebruikt om de positie van de <b>div</b> elementen in het grid te bepalen.</p>
+        <h1>4. Gebruik van animaties</h1>
+        <p>Met CSS-animaties kunt u elementen op uw webpagina vloeiend laten bewegen of van uiterlijk laten veranderen. Hier is een voorbeeld van hoe u CSS-animaties kunt gebruiken:</p>
+        <code>.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    from {top: 0px;}
+    to {top: 200px;}
+}</code>
+        <p>Hier wordt de <b>animation-name</b>, <b>animation-duration</b>, <b>animation-delay</b> en <b>animation-fill-mode</b> eigenschappen gebruikt om de animatie van de <b>.box</b> te beheren. De <b>@keyframes</b> regel wordt gebruikt om de beweging van de <b>div</b> element te definiëren. In dit voorbeeld begint de animatie na 1 seconde te lopen en beweegt de <b>div</b> vanaf de bovenkant van de pagina naar 200 pixels onderaan de pagina.</p>
+        <h1>5. Gebruik van media queries</h1>
+        <p>Met media queries kunt u specifieke CSS-regels toepassen op verschillende apparaten of schermgroottes. Hier is een voorbeeld van hoe u media queries kunt gebruiken:</p>
+        <code>@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 18px;
+    }
+}</code>
+        <p>Hier worden drie media queries gebruikt om de tekstgrootte van de <b>body</b> te wijzigen op basis van de schermgrootte van de gebruiker. Op schermen met een breedte van minder dan 600 pixels wordt de tekstgrootte ingesteld op 14 pixels, op schermen tussen 601 en 1024 pixels wordt de tekstgrootte ingesteld op 16 pixels, en op schermen groter dan 1025 pixels wordt de tekstgrootte ingesteld op 18 pixels.</p>
+        <p>Dit waren enkele voorbeelden van de meer geavanceerde functies van CSS die u kunt gebruiken om uw webpagina's nog beter te maken. Door deze functies te gebruiken, kunt u uw webpagina's responsiever, aantrekkelijker en geavanceerder maken. Veel succes met het toepassen van deze technieken!</p>
+    </div>
+</body>

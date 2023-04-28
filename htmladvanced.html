@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML voor gevorderden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/">Home</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsdom.html">JavaScript DOM</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/cssadvanced.html">CSS voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/htmladvanced.html">HTML voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsadvanced.html">JavaScript voor gevorderden</a>
+    </div>
+
+    <div class="main">
+        <h1>HTML voor gevorderden</h1>
+        <p>Als u al bekend bent met de basisprincipes van HTML, kunt u uw kennis uitbreiden en uw vaardigheden verbeteren door meer geavanceerde concepten en functies te leren. In deze tutorial zullen we ons richten op enkele van deze gevorderde onderwerpen, zoals semantische HTML, formulieren, multimedia en het gebruik van CSS.</p>
+        <h1>Semantische HTML</h1>
+        <p>Semantische HTML is het gebruik van HTML-tags om de betekenis van de inhoud van een webpagina duidelijk te maken. Door semantische HTML te gebruiken, kunt u de structuur en inhoud van uw pagina op een duidelijke en logische manier presenteren. Hieronder vindt u enkele voorbeelden van semantische HTML-tags die u kunt gebruiken:</p>
+        <ul>
+            <li><b>&lt;header></b>: wordt gebruikt om de kop van een pagina of sectie van een pagina aan te geven.</li>
+            <li><b>&lt;nav></b>: wordt gebruikt om navigatielinks te groeperen.</li>
+            <li><b>&lt;main></b>: wordt gebruikt om het belangrijkste inhoudelijke gedeelte van een pagina aan te geven.</li>
+            <li><b>&lt;section></b>: wordt gebruikt om de inhoud van een pagina in verschillende secties te verdelen.</li>
+            <li><b>&lt;article></b>: wordt gebruikt om een zelfstandig artikel of blogpost te markeren.</li>
+            <li><b>&lt;aside></b>: wordt gebruikt om extra informatie aan te duiden die niet direct gerelateerd is aan de hoofdinhoud van de pagina.</li>
+            <li><b>&lt;footer></b>: wordt gebruikt om de voettekst van een pagina aan te geven.</li>
+        </ul>
+        <p>Door semantische HTML-tags te gebruiken, kunt u niet alleen de betekenis van uw inhoud duidelijk maken voor zoekmachines en andere hulpmiddelen, maar het kan ook helpen bij de toegankelijkheid van uw pagina voor mensen met beperkingen.</p>
+        <h1>Formulieren</h1>
+        <p>Formulieren zijn een belangrijk onderdeel van veel websites, omdat ze gebruikers in staat stellen om gegevens in te voeren en te verzenden. Met HTML kunt u verschillende soorten formulierelementen maken, zoals tekstvelden, selectievakjes, radioknoppen en meer. Hieronder vindt u een voorbeeld van een eenvoudig formulier:</p>
+        <code>&lt;form action="verwerkformulier.php" method="POST">
+    &lt;label for="naam">Naam:&lt;/label>
+    &lt;input type="text" id="naam" name="naam">&lt;br>
+
+    &lt;label for="email">E-mail:&lt;/label>
+    &lt;input type="email" id="email" name="email">&lt;br>
+
+    &lt;label for="bericht">Bericht:&lt;/label>
+    &lt;textarea id="bericht" name="bericht">&lt;/textarea>&lt;br>
+
+    &lt;input type="submit" value="Verzenden">
+&lt;/form></code>
+        <p>In dit voorbeeld hebben we een formulier gemaakt met drie velden: een tekstveld voor de naam van de gebruiker, een e-mailveld en een tekstvak voor een bericht. We hebben ook een knop toegevoegd om het formulier te verzenden en een actie- en methodenattribuut opgegeven om aan te geven waar het formulier heen moet worden verzonden en welke methode moet worden gebruikt om de gegevens te verzenden.</p>
+        <h1>Multimedia</h1>
+        <p>Multimedia, zoals afbeeldingen, video's en audio, kunnen uw webpagina's verrijken en de gebruikerservaring verbeteren.</p>
+        <p>HTML biedt verschillende tags voor het weergeven van multimedia-inhoud. Hieronder staan enkele van de meest gebruikte tags:</p>
+        <ul>
+            <li><b>&lt;img></b>: wordt gebruikt om afbeeldingen in te voegen.</li>
+            <li><b>&lt;video></b>: wordt gebruikt om video's in te voegen.</li>
+            <li><b>&lt;audio></b>: wordt gebruikt om audiobestanden in te voegen.</li>
+        </ul>
+        <p>Laten we een voorbeeld bekijken van het invoegen van een afbeelding:</p>
+        <code>&lt;img src="voorbeeld.jpg" alt="Een voorbeeldafbeelding"></code>
+        <p>In dit voorbeeld hebben we de <b>&lt;img></b>-tag gebruikt om een afbeelding in te voegen met de bron (src) en alt-attributen. Het src-attribuut geeft de URL op waar de afbeelding zich bevindt, terwijl het alt-attribuut een tekst beschrijft die wordt weergegeven als de afbeelding niet kan worden geladen of toegankelijk is voor bepaalde gebruikers.</p>
+        <p>Voor video- en audiobestanden kunt u de <b>&lt;video></b>- en <b>&lt;audio></b>-tags gebruiken en verschillende attributen instellen om het afspelen en de weergave van de media te regelen.</p>
+        <h1>CSS-styling</h1>
+        <p>CSS is een krachtige taal voor het stylen van HTML-pagina's en het veranderen van de weergave van elementen. Door CSS te gebruiken, kunt u de kleuren, lettertypen, lay-out en andere visuele aspecten van uw webpagina's aanpassen.</p>
+        <p>Om CSS toe te passen op uw HTML-pagina's, kunt u de volgende methoden gebruiken:</p>
+        <ul>
+            <li>Externe stijlbladen: u kunt een extern CSS-bestand maken en deze koppelen aan uw HTML-pagina met behulp van het <b>&lt;link></b>-element.</li>
+            <li>Interne stijlbladen: u kunt CSS-stijlen rechtstreeks in de head van uw HTML-pagina plaatsen met behulp van het <b>&lt;style></b>-element.</li>
+            <li> u kunt stijlregels rechtstreeks in HTML-elementen opnemen met behulp van het style-attribuut.</li>
+        </ul>
+        <p>Laten we een voorbeeld bekijken van het toepassen van CSS-stijlen op een HTML-element:</p>
+        <code>&lt;h1 style="color: blue; font-size: 24px;">Een blauwe kop&lt;/h1></code>
+        <p>In dit voorbeeld hebben we het style-attribuut gebruikt om de kleur en de lettergrootte van de <b>&lt;h1></b>-kop te wijzigen.</p>
+        <p>Er zijn veel meer geavanceerde concepten en functies in HTML en CSS die u kunt leren om uw webpagina's nog krachtiger en effectiever te maken. Maar met de kennis en vaardigheden die u hebt opgedaan in deze tutorial, zou u een stevige basis moeten hebben om verder te gaan en uw vaardigheden verder te ontwikkelen.</p>
+    </div>
+
+
+
+</body>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript en de DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/">Home</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsdom.html">JavaScript DOM</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/cssadvanced.html">CSS voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/htmladvanced.html">HTML voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsadvanced.html">JavaScript voor gevorderden</a>
+    </div>
+
+    <div class="main">
+        <h1 class="big">JavaScript DOM</h1>
+            <p>De Document Object Model (DOM) is een programmeerinterface voor webpagina's. Het biedt een hiërarchische representatie van de HTML-structuur van een webpagina, waarmee JavaScript kan worden gebruikt om dynamisch de inhoud en het uiterlijk van een webpagina te wijzigen. Hieronder volgt een tutorial over het gebruik van JavaScript en de DOM.</p>
+        <h1>1. Het selecteren van HTML-elementen</h1>
+        <p>JavaScript kan worden gebruikt om HTML-elementen te selecteren en te manipuleren. Dit kan worden gedaan met behulp van verschillende methoden, waaronder:</p>
+        <h2>getElementById</h2>
+        <p>De <b>getElementById</b> methode retourneert het HTML-element met de opgegeven <b>id</b>-attribuutwaarde.</p>
+        <code>const element = document.getElementById("example");</code>
+        <h2>getElementsByClassName</h2>
+        <p>De <b>getElementsByClassName</b> methode retourneert een array-achtig object met alle HTML-elementen die de opgegeven klasse hebben.</p>
+        <code>const elements = document.getElementsByClassName("example");</code>
+        <h2>getElementsByTagName</h2>
+        <p>De <b>getElementsByTagName</b> methode retourneert een array-achtig object met alle HTML-elementen van het opgegeven tagtype.</p>
+        <code>const elements = document.getElementsByTagName("p");</code>
+        <h2>querySelector</h2>
+        <p>De <b>querySelector</b> methode retourneert het eerste HTML-element dat overeenkomt met de opgegeven selector.</p>
+        <code>const element = document.querySelector(".example");</code>
+        <h2>querySelectorAll</h2>
+        <p>De <b>querySelectorAll</b> methode retourneert een NodeList-object met alle HTML-elementen die overeenkomen met de opgegeven selector.</p>
+        <code>const elements = document.querySelectorAll("p.example");</code>
+        <h1>2. Het wijzigen van HTML-elementen</h1>
+        <p>Nadat een HTML-element is geselecteerd, kan het worden gewijzigd met behulp van verschillende eigenschappen en methoden.</p>
+        <h2>innerHTML</h2>
+        <p>De <b>innerHTML</b> eigenschap kan worden gebruikt om de inhoud van een HTML-element te wijzigen. Het kan worden ingesteld op een nieuwe HTML-string, inclusief HTML-tags.</p>
+        <code>const element = document.getElementById("example");
+element.innerHTML = "&lt;p>Dit is een nieuwe paragraaf.&lt;/p>";</code>
+        <h2>textContent</h2>
+        <p>De <b>textContent</b> eigenschap kan worden gebruikt om de tekstinhoud van een HTML-element te wijzigen.</p>
+        <code>const element = document.getElementById("example");
+element.textContent = "Dit is nieuwe tekst.";</code>
+        <h2>style</h2>
+        <p>De <b>style</b> eigenschap kan worden gebruikt om de CSS-stijl van een HTML-element te wijzigen.</p>
+        <code>const element = document.getElementById("example");
+element.style.backgroundColor = "red";</code>
+        <h2>classList</h2>
+        <p>De <b>classList</b> eigenschap kan worden gebruikt om de klasse van een HTML-element te wijzigen.</p>
+        <code>const element = document.getElementById("example");
+element.classList.add("new-class");</code>
+        <h1>3. Het toevoegen van HTML-elementen</h1>
+        <p>Nieuwe HTML-elementen kunnen worden toegevoegd aan een webpagina met behulp van de <b>createElement</b> en <b>appendChild</b> methoden.</p>
+        <code>const element = document.createElement("p");
+element.textContent = "Dit is een nieuwe paragraaf.";
+        
+const container = document.getElementById("container");
+container.appendChild(element);</code>
+        <p>In dit voorbeeld wordt een nieuwe paragraaf gemaakt met behulp van de <b>createElement</b> methode en vervolgens toegevoegd aan het HTML-element met het <b>id</b>-attribuut "container" met behulp van de <b>appendChild</b> methode.</p>
+        <h1>4. Het verwijderen van HTML-elementen</h1>
+        <p>HTML-elementen kunnen worden verwijderd van een webpagina met behulp van de <b>removeChild</b> methode.</p>
+        <code>const element = document.getElementById("example");
+const container = document.getElementById("container");
+container.removeChild(element);</code>
+        <p>In dit voorbeeld wordt het HTML-element met het <b>id</b>-attribuut "example" verwijderd uit het HTML-element met het <b>id</b>-attribuut "container" met behulp van de <b>removeChild</b> methode.</p>
+        <h1>5. Het toevoegen van event listeners</h1>
+        <p>JavaScript kan worden gebruikt om event listeners toe te voegen aan HTML-elementen. Dit maakt het mogelijk om JavaScript-code uit te voeren wanneer bepaalde gebeurtenissen optreden, zoals een muisklik of toetsaanslag.</p>
+        <code>const button = document.getElementById("button");
+button.addEventListener("click", function() {
+    alert("Hallo wereld!");
+});</code>
+        <p>In dit voorbeeld wordt een event listener toegevoegd aan het HTML-element met het <b>id</b>-attribuut "button". Wanneer dit element wordt geklikt, wordt de anonieme functie uitgevoerd, die een berichtvenster met de tekst "Hallo wereld!" weergeeft.</p>
+        <h1>6. Het wijzigen van attributen</h1>
+        <p>HTML-attributen kunnen worden gewijzigd met behulp van de <b>setAttribute</b> methode.</p>
+        <code>const element = document.getElementById("example");
+element.setAttribute("class", "new-class");</code>
+        <p>In dit voorbeeld wordt het <b>class</b>-attribuut van het HTML-element met het <b>id</b>-attribuut "example" gewijzigd in "new-class".</p>
+        <h2>tagName</h2>
+        <p>De <b>tagName</b> eigenschap retourneert de tag van een HTML-element.</p>
+        <code>const element = document.getElementById("example");
+const tag = element.tagName;
+console.log(tag);</code>
+        <p>In dit voorbeeld wordt de tag van het HTML-element met het <b>id</b>-attribuut "example" verkregen met behulp van de <b>tagName</b> eigenschap.</p>
+        <h2>id</h2>
+        <p>De <b>id</b> eigenschap retourneert de waarde van het <b>id</b>-attribuut van een HTML-element.</p>
+        <code>const element = document.getElementById("example");
+const id = element.id;
+console.log(id);</code>
+        <p>In dit voorbeeld wordt de waarde van het <b>id</b>-attribuut van het HTML-element met het <b>id</b>-attribuut "example" verkregen met behulp van de <b>id</b> eigenschap.</p>
+        <h2>classList</h2>
+        <p>De <b>classList</b> eigenschap retourneert een lijst van de klassen van een HTML-element.</p>
+        <code>const element = document.getElementById("example");
+const classes = element.classList;
+console.log(classes);</code>
+        <p>In dit voorbeeld wordt een lijst van de klassen van het HTML-element met het <b>id</b>-attribuut "example" verkregen met behulp van de <b>classList</b> eigenschap.</p>
+        <p>Dit was een basisintroductie van JavaScript en de DOM. Er is veel meer te leren over deze onderwerpen, maar hopelijk biedt deze tutorial een goede basis voor verdere exploratie.</p>
+    </div>
+</body>
+</html>

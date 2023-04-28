@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Voor Gevorderden</title>
+</head>
+<body>
+
+    <div class="sidenav">
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/">Home</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsdom.html">JavaScript DOM</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/cssadvanced.html">CSS voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/htmladvanced.html">HTML voor gevorderden</a>
+        <a href="file:///home/chronos/u-bed3c07369fbdd29080aae60ad211022b9f75c55/MyFiles/VS%20code%20online/ChatGPT%20tutorials/jsadvanced.html">JavaScript voor gevorderden</a>
+    </div>
+
+    <div class="main">
+        <h1 class="big">JavaScript Voor gevorderden</h1>
+        <p>Welkom bij deze JavaScript tutorial voor gevorderden! In deze tutorial zullen we enkele van de meer geavanceerde concepten van JavaScript behandelen en laten zien hoe u deze kunt gebruiken om krachtige webapplicaties te bouwen.</p>
+        <h1>1. Closures</h1>
+        <p>Een closure is een functie die toegang heeft tot variabelen in zijn omgeving, zelfs nadat de omgeving is vernietigd. Dit is een krachtige functie van JavaScript die u kunt gebruiken om variabelen te behouden tussen functie-oproepen en om privé-variabelen te maken. Bijvoorbeeld:</p>
+        <code>function createCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        console.log(count);
+    }
+}
+
+const counter = createCounter();
+counter(); // output: 1
+counter(); // output: 2
+counter(); // output: 3</code>
+        <p>In dit voorbeeld creëren we een functie <b>createCounter()</b> die een functie retourneert die <b>count</b> kan verhogen en afdrukken telkens wanneer deze wordt aangeroepen. De variabele <b>count</b> wordt opgeslagen in de closure van de functie en wordt bij elke oproep bijgewerkt.</p>
+        <h1>2. Promises</h1>
+        <p>Promises zijn een manier om asynchrone code te schrijven in JavaScript zonder dat u callbacks nodig heeft. Een promise representeert de uitkomst van een asynchrone taak en kan in verschillende toestanden zijn: <b>pending</b>, <b>fulfilled</b> of <b>rejected</b>. U kunt een promise maken met de <b>Promise</b> constructor. Bijvoorbeeld:</p>
+        <code>const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const randomNum = Math.random();
+        if (randomNum > 0.5) {
+            resolve(randomNum);
+        } else {
+            reject(new Error('Number is too small'));
+        }
+    }, 1000);
+});
+
+promise.then((result) => {
+    console.log('Success:', result);
+}).catch((error) => {
+    console.error('Error:', error.message);
+});</code>
+        <p>In dit voorbeeld creëren we een promise die na 1 seconde een willekeurig getal retourneert tussen 0 en 1. Als het getal groter is dan 0,5, wordt het resultaat opgelost met <b>resolve()</b>. Anders wordt een fout gegenereerd en het resultaat afgewezen met <b>reject()</b>. We gebruiken vervolgens de <b>then()</b> en <b>catch()</b> methoden om het resultaat af te handelen.</p>
+        <h1>3. Generators</h1>
+        <p>Een generator is een functie die meerdere waarden kan produceren in plaats van slechts één waarde. In plaats van de <b>return</b> statement gebruiken we de <b>yield</b> statement om de waarden te retourneren. U kunt een generator creëren met een <b>function*</b> statement. Bijvoorbeeld:</p>
+        <code>function* generateSequence(start, end) {
+    for (let i = start; i &lt;= end; i++) {
+        yield i;
+    }
+}
+
+const sequence = generateSequence(1, 3);
+console.log(sequence.next().value); // output: 1
+console.log(sequence.next().value); // output: 2
+console.log(sequence.next().value); // output: 3</code>
+        <p>In dit voorbeeld creëren we een generator <b>generateSequence()</b> die een reeks getallen produceert van <b>start</b> tot <b>end</b>. We gebruiken de <b>yield</b> statement om elk getal één voor één te retourneren. Vervolgens gebruiken we de <b>next()</b> methode om elk volgend getal in de reeks op te halen. Wanneer er geen waarden meer zijn, retourneert <b>next() { value: undefined, done: true }</b>.</p>
+        <h1>4. Async/await</h1>
+        <p>Async/await is een syntactische suiker bovenop Promises die het gemakkelijker maakt om asynchrone code te schrijven. Met async/await kunt u asynchrone code schrijven alsof het synchrone code is, wat het gemakkelijker maakt om complexe code te lezen en te onderhouden. Bijvoorbeeld:</p>
+        <code>function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Data has been fetched');
+        }, 1000);
+    });
+}
+
+async function fetchDataAsync() {
+    const data = await fetchData();
+    console.log(data);
+}
+
+fetchDataAsync(); // output: Data has been fetched</code>
+        <p>In dit voorbeeld creëren we een functie <b>fetchData()</b> die een promise creëert die na 1 seconde de tekst 'Data has been fetched' retourneert. We creëren vervolgens een asynchrone functie <b>fetchDataAsync()</b> die <b>fetchData()</b> aanroept met de <b>await</b> operator. Hierdoor wachten we tot de promise is opgelost en slaan we het resultaat op in de variabele <b>data</b>. We gebruiken vervolgens de <b>console.log()</b> methode om het resultaat af te drukken.</p>
+        <p>Dit waren enkele van de meer geavanceerde concepten van JavaScript die u kunt gebruiken om krachtige webapplicaties te bouwen. Door deze concepten te begrijpen en te gebruiken, kunt u uw code efficiënter en flexibeler maken. Veel succes met het bouwen van uw applicaties!</p>
+    </div>
+</body>
+</html>
