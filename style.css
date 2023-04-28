@@ -84,3 +84,16 @@ b::after {
 .sidenav a:hover {
   color: #f1f1f1;
 }
+
+.buttonlink a:link,.buttonlink  a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buttonlink a:hover,.buttonlink a:active {
+  background-color: rgb(96, 200, 59);
+}
