@@ -78,14 +78,15 @@ b::after {
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: block; 
+  display: block;
 }
 
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-.buttonlink a:link,.buttonlink  a:visited {
+.buttonlink a:link,
+.buttonlink a:visited {
   background-color: #f44336;
   color: white;
   padding: 14px 25px;
@@ -94,6 +95,11 @@ b::after {
   display: inline-block;
 }
 
-.buttonlink a:hover,.buttonlink a:active {
+.buttonlink a:hover,
+.buttonlink a:active {
   background-color: rgb(96, 200, 59);
+}
+
+.leftindent::before {
+  content: "    ";
 }
