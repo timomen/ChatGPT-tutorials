@@ -100,6 +100,6 @@ b::after {
   background-color: rgb(96, 200, 59);
 }
 
-.leftindent::before {
-  content: "    ";
+.leftindent {
+  margin-left: 5%;
 }
